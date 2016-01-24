@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://local.dev/" />
+<title>register_checkout</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">register_checkout</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/magento/magento_tests/customer/account/logout/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/magento/magento_tests/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>emailtestcheckoutxxxx@yopmail2.com</td>
+	<td>email</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.button.search-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.button.btn-cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login:register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=onepage-guest-register-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:firstname</td>
+	<td>herve</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:lastname</td>
+	<td>herve</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:email</td>
+	<td>${email}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:street1</td>
+	<td>16 rue des tests</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:city</td>
+	<td>Strasbourg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:postcode</td>
+	<td>67000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing:country_id</td>
+	<td>label=France</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing:region_id</td>
+	<td>label=Aisne</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:telephone</td>
+	<td>0836656565</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:month</td>
+	<td>03</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:day</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:year</td>
+	<td>2012</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing:gender</td>
+	<td>label=Male</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:customer_password</td>
+	<td>herve25</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:confirm_password</td>
+	<td>herve25</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#billing-buttons-container &gt; button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=checkout-step-shipping_method</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#shipping-method-buttons-container &gt; button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=checkout-step-payment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=p_method_checkmo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#payment-buttons-container &gt; button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=checkout-step-review</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button.btn-checkout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
