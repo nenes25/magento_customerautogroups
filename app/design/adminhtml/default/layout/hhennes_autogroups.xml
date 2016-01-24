@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    
+    <!-- Grid -->
+    <adminhtml_autogroups_rule_index>
+        <reference name="content">
+            <block type="hhennes_autogroups/adminhtml_rule" name="autogroup_rules" as="autogrouprules" />
+        </reference>
+    </adminhtml_autogroups_rule_index>
+    
+</layout>
