@@ -1,0 +1,3 @@
+app/code/local/Hhennes/AutoGroups/  app/code/community/Hhennes/AutoGroups/
+app/etc/modules/Hhennes_AutoGroups.xml app/etc/modules/Hhennes_AutoGroups.xml
+app/design/adminhtml/default/default/layout/Hhennes_AutoGroups.xml app/design/adminhtml/default/default/layout/Hhennes_AutoGroups.xml
