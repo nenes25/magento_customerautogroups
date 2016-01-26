@@ -63,16 +63,7 @@ class Hhennes_AutoGroups_Block_Adminhtml_Rule_Edit_Form extends Mage_Adminhtml_B
             'title' => $this->__('Conditions'),
         ))->setRule($model)->setRenderer(Mage::getBlockSingleton('rule/conditions'));
 
-        //Pour les conditions il faudra faire un champ spécial ( voir comment sont gérées les règles)
-        //Estimation 3 heures au min
-        /* $fieldset->addField('conditions_serialized', 'textarea', array(
-          'name' => 'conditions_serialized',
-          'label' => $this->__('conditions_serialized'),
-          'required' => false,
-          'validate' => 'required-entry'
-          )
-          ); */
-
+		
         //Récupération des groupes clients @ToDO voir pour utiliser les fonctions magento
         $groups = Mage::helper('hhennes_autogroups')->getGroupList();
 
@@ -98,16 +89,16 @@ class Hhennes_AutoGroups_Block_Adminhtml_Rule_Edit_Form extends Mage_Adminhtml_B
                 )
         );
 
+		
+		$priority = Mage::helper('hhennes_autogroups')->getPrioritiesList();
+		
         $fieldset->addField('priority', 'select', array(
             'name' => 'priority',
             'label' => $this->__('priority'),
             'required' => true,
             'validate' => 'required-entry',
-            'options' => array(
-                '1' => $this->__('Yes'),
-                '0' => $this->__('No'),
-            ),
-                )
+            'options' => $priority,
+            )
         );
 
         $fieldset->addField('stop_processing', 'select', array(

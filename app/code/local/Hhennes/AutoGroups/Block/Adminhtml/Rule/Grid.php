@@ -48,9 +48,19 @@ class Hhennes_AutoGroups_Block_Adminhtml_Rule_Grid extends Mage_Adminhtml_Block_
         ));
         
         $this->addColumn('active', array(
-           'header' =>  $this->__('Description'),
+           'header' =>  $this->__('Active'),
            'index' => 'active',
            'sortable' => true,
+		   'type'=>'options',
+           'options' => array('1' => 'Yes', '0' => 'No')
+        ));
+		
+		$this->addColumn('stop_processing', array(
+           'header' =>  $this->__('Stop processing'),
+           'index' => 'stop_processing',
+           'sortable' => true,
+		   'type'=>'options',
+           'options' => array('1' => 'Yes', '0' => 'No')
         ));
         
         return parent::_prepareColumns();

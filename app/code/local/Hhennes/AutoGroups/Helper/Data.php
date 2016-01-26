@@ -21,5 +21,19 @@ class Hhennes_AutoGroups_Helper_Data extends Mage_Core_Helper_Abstract {
         return $groupsList;
         
     }
+	
+	/**
+	 * Liste des priorités
+	 */
+	public function getPrioritiesList() {
+		
+		$max = 10;
+		$options = array();
+		for( $i=1; $i <= $max ; $i++) {
+			$options[$i] = $i;
+		}
+				
+		return $options;
+	}
     
 }
