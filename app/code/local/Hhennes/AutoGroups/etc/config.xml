@@ -59,6 +59,15 @@
                 </observers>
             </checkout_submit_all_after>
         </events>
+        <routers>
+            <hhennes_autogroups>
+                <use>standard</use>
+                <args>
+                    <module>Hhennes_AutoGroups</module>
+                    <frontName>hhennes_autogroups</frontName>
+                </args>
+            </hhennes_autogroups>
+        </routers>
     </frontend>
     <admin>
         <routers>
@@ -71,9 +80,9 @@
             </adminhtml>
         </routers>
     </admin>
-    
-    <!-- 
-        Si ce noeud n'était pas dans le fichier de configuration ça ne fonctionnait pas... va savoir pourquoi 
+
+    <!--
+        Si ce noeud n'était pas dans le fichier de configuration ça ne fonctionnait pas... va savoir pourquoi
         Mais il était pourtant bien dans le fichier adminhtml ( Idem pour les trads, à priori il faut les mettre ici )
     -->
     <adminhtml>
