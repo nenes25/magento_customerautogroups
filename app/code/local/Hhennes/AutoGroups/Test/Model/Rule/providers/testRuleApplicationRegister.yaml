@@ -1,0 +1,21 @@
+- case firstname match :
+    firstname: "Herve firstname"
+    lastname : "herve"
+    email : "test@herve.com"
+    expected_group : "register firstname"
+- case firstname not match :
+    firstname: "Not true"
+    lastname : "herve"
+    email : "test@herve.com"
+    expected_group : "none"
+- case lastname :
+    firstname: "Herve"
+    lastname : "Herve lastname"
+    email : "test@herve.com"
+    expected_group : "register lastname"
+- case email :
+    firstname: "Herve"
+    lastname : "test"
+    email : "testemail@herve.com"
+    expected_group : "register email"
+

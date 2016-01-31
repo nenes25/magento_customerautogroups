@@ -5,7 +5,7 @@
  *
  * @author herve
  */
-class Hhennes_AutoGroups_Test_Unit_Config_Main extends EcomDev_PHPUnit_Test_Case_Config
+class Hhennes_AutoGroups_Test_Config_Main extends EcomDev_PHPUnit_Test_Case_Config
 {
 
     /**
@@ -63,8 +63,8 @@ class Hhennes_AutoGroups_Test_Unit_Config_Main extends EcomDev_PHPUnit_Test_Case
         $this->assertModelAlias($this->_nodeName . '/rule_condition_combine', 'Hhennes_AutoGroups_Model_Rule_Condition_Combine');
         $this->assertModelAlias($this->_nodeName . '/rule_condition_customer', 'Hhennes_AutoGroups_Model_Rule_Condition_Customer');
 
-        $this->assertModelAlias($this->_nodeName . '/resource_rule', 'Hhennes_AutoGroups_Resource_Model_Rule');
-        $this->assertModelAlias($this->_nodeName . '/resource_rule_collection', 'Hhennes_AutoGroups_Resource_Model_Rule_Collection');
+        $this->assertModelAlias($this->_nodeName . '/resource_rule', 'Hhennes_AutoGroups_Model_Resource_Rule');
+        $this->assertModelAlias($this->_nodeName . '/resource_rule_collection', 'Hhennes_AutoGroups_Model_Resource_Rule_Collection');
 
         //Helpers
         $this->assertHelperAlias($this->_nodeName, 'Hhennes_AutoGroups_Helper_Data');
@@ -74,6 +74,15 @@ class Hhennes_AutoGroups_Test_Unit_Config_Main extends EcomDev_PHPUnit_Test_Case
         $this->assertBlockAlias($this->_nodeName . '/adminhtml_rule_grid', 'Hhennes_AutoGroups_Block_Adminhtml_Rule_Grid');
         $this->assertBlockAlias($this->_nodeName . '/adminhtml_rule_edit', 'Hhennes_AutoGroups_Block_Adminhtml_Rule_Edit');
         $this->assertBlockAlias($this->_nodeName . '/adminhtml_rule_edit_form', 'Hhennes_AutoGroups_Block_Adminhtml_Rule_Edit_Form');
+    }
+    
+    /**
+     * Test que les événements sont bien définis
+     */
+    public function testEvents() {
+        
+        $this->assertEventObserverDefined('frontend', 'customer_register_success', 'hhennes_autogroups/observer', 'applyGroupRulesOnCustomerRegisterSuccess');
+        $this->assertEventObserverDefined('frontend', 'checkout_submit_all_after', 'hhennes_autogroups/observer', 'applyGroupRulesOnCheckout');
     }
 
 }
